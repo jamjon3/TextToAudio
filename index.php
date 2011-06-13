@@ -83,9 +83,17 @@
 <h2>Inline PHP function call</h2>
 <div id="inlineExample">
     <span style='display:inline-block;position: relative;width: 100%;'>This is an example of handling the call exclusively in PHP. There's a call to a included php function called "espeakService".</span>
-    <p><audio src="data:audio/ogg;base64,<?php echo base64_encode(espeak2ogg("I'm a function call that loads audio within PHP")); ?>" controls="controls"></p>
-    </audio>
-</div>
+    <p>
+        <audio src="data:audio/ogg;base64,<?php echo base64_encode(espeak2ogg("I'm a function call that loads audio within PHP")); ?>" controls="controls">
+        </audio>
+    </p>
+    <span style='display:inline-block;position: relative;width: 100%;'>This is an example of handling the call exclusively in PHP. There's a call to a included php function called "espeakService". This is a slight variation using the source tag. </span>
+    <p>
+        <audio controls="controls">
+            <source src="data:audio/ogg;base64,<?php echo base64_encode(espeak2ogg("I'm a function call that loads audio within PHP")); ?>" type="audio/ogg" />
+        </audio>
+    </p>
+</di</div>
 <h2>AJAX JQuery Plugin (<a href="espeakUI.php">Check out the JQuery ui plugin - BEST and RECOMMENDED plugin!!</a>)</h2>
 <div id='useAudioPlugin'>
     <p><span style='display:inline-block;position: relative;width: 100%;'>This is an example of a JQuery simple plugin that performs an AJAX call to retrieve the audio asyncronously.</span></p>
